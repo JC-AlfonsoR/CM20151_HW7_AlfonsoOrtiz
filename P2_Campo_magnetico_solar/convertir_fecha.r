@@ -1,3 +1,4 @@
+#intento de leer fechas, pero se intentó meor con mupy en python
 library(lubridate)
 library(dplyr)
 library(tidyr)
