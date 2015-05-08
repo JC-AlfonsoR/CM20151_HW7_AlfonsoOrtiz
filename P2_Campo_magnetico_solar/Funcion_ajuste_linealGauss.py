@@ -129,7 +129,7 @@ f.write(titulo+'\n')
 f.write(info+'\n')
 f.write(heading+'\n')
 
-n=2
+n=10
 for i in range(n):
     campo=cols[:,x[i],y[i]]
     
@@ -139,18 +139,12 @@ for i in range(n):
     
     f.write(str(x[i]) + ',' + str(y[i]) + ',' + '%.7f'%best_like + ',' + '%.7f'%best_c + ',' + '%.7f'%best_d + ',' + '%.7f'%best_sigma + ',' + '%.7f'%best_mu +  '\n')
     
-    plot(tiempo,best_campo,'g-')
-    plot(tiempo,campo,'bo')
-    show()
+    #plot(tiempo,best_campo,'g-')
+    #plot(tiempo,campo,'bo')
+    #show()
 f.close()
 
 
-# In[15]:
-
-get_ipython().system(u'cat Modelo_Gauss.csv')
-
-
-# In[ ]:
 
 
 

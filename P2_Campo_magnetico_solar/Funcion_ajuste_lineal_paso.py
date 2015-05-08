@@ -121,7 +121,7 @@ def fit_lineal(like_walk, f_walk, g_walk, h_walk, n_walk, t0_walk):
 # In[6]:
 
 titulo = 'Ajuste Lineal Paso'
-info = "x,y son las coordenas del pixel analizado en el archivo 'hmi.m_45s.magnetogram.subregion_x1y1.fits'. best_b y best_a son los parametros de maximo likelihood para el modelo lineal"
+info = "x,y son las coordenas del pixel analizado en el archivo 'hmi.m_45s.magnetogram.subregion_x1y1.fits'. best_f y best_g, best_h, best_n, best_t0 son los parametros de maximo likelihood para el modelo lineal"
 heading = 'x,y,best_likelihood,best_f,best_g,best_h,best_n,best_t0' #modificar cada parametro
 f = open('Modelo_Paso.csv','w')
 f.write(titulo+'\n')
@@ -129,7 +129,7 @@ f.write(info+'\n')
 f.write(heading+'\n')
 
 
-n=1
+n=10
 for i in range(n):
     campo=cols[:,x[i],y[i]]
     
@@ -145,13 +145,6 @@ for i in range(n):
     #show()
 f.close()
 
-
-# In[14]:
-
-get_ipython().system(u'cat Modelo_Paso.csv')
-
-
-# In[ ]:
 
 
 
