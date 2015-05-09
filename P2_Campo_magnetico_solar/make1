@@ -1,0 +1,13 @@
+all: Funcion_ajuste_linealGauss.py  Funcion_ajuste_lineal_paso.py Funcion_ajuste_lineal.py Modelo_Gauss.csv Modelo_Lineal.csv Modelo_Paso.csv times_delta.csv ./images/*.png hmi.m_45s.magnetogram.subregion_x1y1.fits Mejores_modelos.txt
+
+Mejores_modelos.txt : hmi.m_45s.magnetogram.subregion_x1y1.fits
+	python Funcion_ajuste_lineal_paso.py Funcion_ajuste_lineal.py
+	python Funcion_ajuste_linealGauss.py Funcion_ajuste_lineal.py
+	python Funcion_ajuste_lineal.py Funcion_ajuste_lineal.py
+	python Punto2_b.py
+
+./images/*.png : Punto2_b.py
+	python Punto2_b.py
+
+./images/*.png : Mejores_modelos.txt
+	python Punto2_b
