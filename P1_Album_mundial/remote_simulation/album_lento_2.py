@@ -40,5 +40,5 @@ for i in range(len(M)):
 
 #Guardar datos    
 Data = vstack((M,Media,Varianza)).T
-savetxt('Album_lento_0.csv',Data,delimiter=',')
+savetxt('Album_lento_2.csv',Data,delimiter=',')
 print(datetime.datetime.now())
